@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB9459102BCD044B00D8E456 /* DragonWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94590F2BCD044B00D8E456 /* DragonWS.swift */; };
+		AB9459132BCDBD3200D8E456 /* Dragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9459122BCDBD3200D8E456 /* Dragon.swift */; };
+		AB9459152BCE1D6200D8E456 /* AnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9459142BCE1D6200D8E456 /* AnimationButton.swift */; };
 		ABAF362D2BC890BC0051B781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF362C2BC890BC0051B781 /* AppDelegate.swift */; };
 		ABAF362F2BC890BC0051B781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF362E2BC890BC0051B781 /* SceneDelegate.swift */; };
 		ABAF36312BC890BC0051B781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF36302BC890BC0051B781 /* ViewController.swift */; };
 		ABAF36342BC890BC0051B781 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ABAF36332BC890BC0051B781 /* Base */; };
-		ABAF36362BC890C00051B781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF36352BC890C00051B781 /* Assets.xcassets */; };
 		ABAF36392BC890C00051B781 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ABAF36382BC890C00051B781 /* Base */; };
 		ABAF36442BC890C20051B781 /* ChallengeCapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF36432BC890C20051B781 /* ChallengeCapiTests.swift */; };
 		ABAF364E2BC890C20051B781 /* ChallengeCapiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF364D2BC890C20051B781 /* ChallengeCapiUITests.swift */; };
 		ABAF36502BC890C20051B781 /* ChallengeCapiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF364F2BC890C20051B781 /* ChallengeCapiUITestsLaunchTests.swift */; };
 		ABAF365D2BC891350051B781 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF365C2BC891350051B781 /* KeyboardManager.swift */; };
+		ABAF366B2BC9BCD70051B781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF366A2BC9BCD70051B781 /* Assets.xcassets */; };
+		ABAF36712BC9BE120051B781 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF36702BC9BE120051B781 /* HomeView.swift */; };
+		ABAF36732BC9BE1B0051B781 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF36722BC9BE1B0051B781 /* HomeViewController.swift */; };
+		ABAF36752BC9DFD70051B781 /* AppNavegationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF36742BC9DFD70051B781 /* AppNavegationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB94590F2BCD044B00D8E456 /* DragonWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonWS.swift; sourceTree = "<group>"; };
+		AB9459122BCDBD3200D8E456 /* Dragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon.swift; sourceTree = "<group>"; };
+		AB9459142BCE1D6200D8E456 /* AnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationButton.swift; sourceTree = "<group>"; };
 		ABAF36292BC890BC0051B781 /* ChallengeCapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeCapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF362C2BC890BC0051B781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABAF362E2BC890BC0051B781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ABAF36302BC890BC0051B781 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABAF36332BC890BC0051B781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ABAF36352BC890C00051B781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABAF36382BC890C00051B781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABAF363A2BC890C00051B781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABAF363F2BC890C20051B781 /* ChallengeCapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeCapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +59,10 @@
 		ABAF364D2BC890C20051B781 /* ChallengeCapiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCapiUITests.swift; sourceTree = "<group>"; };
 		ABAF364F2BC890C20051B781 /* ChallengeCapiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCapiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ABAF365C2BC891350051B781 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		ABAF366A2BC9BCD70051B781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		ABAF36702BC9BE120051B781 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		ABAF36722BC9BE1B0051B781 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ABAF36742BC9DFD70051B781 /* AppNavegationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavegationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +124,7 @@
 				ABAF362E2BC890BC0051B781 /* SceneDelegate.swift */,
 				ABAF36302BC890BC0051B781 /* ViewController.swift */,
 				ABAF36322BC890BC0051B781 /* Main.storyboard */,
-				ABAF36352BC890C00051B781 /* Assets.xcassets */,
+				ABAF366A2BC9BCD70051B781 /* Assets.xcassets */,
 				ABAF36372BC890C00051B781 /* LaunchScreen.storyboard */,
 				ABAF363A2BC890C00051B781 /* Info.plist */,
 			);
@@ -139,6 +151,8 @@
 		ABAF365E2BC891430051B781 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				ABAF36702BC9BE120051B781 /* HomeView.swift */,
+				ABAF36722BC9BE1B0051B781 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -146,6 +160,7 @@
 		ABAF365F2BC8914D0051B781 /* WS */ = {
 			isa = PBXGroup;
 			children = (
+				AB94590F2BCD044B00D8E456 /* DragonWS.swift */,
 			);
 			path = WS;
 			sourceTree = "<group>";
@@ -192,6 +207,7 @@
 		ABAF36652BC8919D0051B781 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB9459122BCDBD3200D8E456 /* Dragon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +215,8 @@
 		ABAF36662BC891AA0051B781 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				ABAF36742BC9DFD70051B781 /* AppNavegationController.swift */,
+				AB9459142BCE1D6200D8E456 /* AnimationButton.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -298,6 +316,9 @@
 				Base,
 			);
 			mainGroup = ABAF36202BC890BC0051B781;
+			packageReferences = (
+				AB9459112BCDA73E00D8E456 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = ABAF362A2BC890BC0051B781 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,8 +335,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABAF36362BC890C00051B781 /* Assets.xcassets in Resources */,
 				ABAF36392BC890C00051B781 /* Base in Resources */,
+				ABAF366B2BC9BCD70051B781 /* Assets.xcassets in Resources */,
 				ABAF36342BC890BC0051B781 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,9 +363,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABAF365D2BC891350051B781 /* KeyboardManager.swift in Sources */,
+				ABAF36752BC9DFD70051B781 /* AppNavegationController.swift in Sources */,
 				ABAF36312BC890BC0051B781 /* ViewController.swift in Sources */,
 				ABAF362D2BC890BC0051B781 /* AppDelegate.swift in Sources */,
+				AB9459152BCE1D6200D8E456 /* AnimationButton.swift in Sources */,
+				ABAF36712BC9BE120051B781 /* HomeView.swift in Sources */,
+				AB9459132BCDBD3200D8E456 /* Dragon.swift in Sources */,
 				ABAF362F2BC890BC0051B781 /* SceneDelegate.swift in Sources */,
+				AB9459102BCD044B00D8E456 /* DragonWS.swift in Sources */,
+				ABAF36732BC9BE1B0051B781 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +718,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB9459112BCDA73E00D8E456 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = ABAF36212BC890BC0051B781 /* Project object */;
 }

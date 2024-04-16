@@ -12,3 +12,16 @@ nothing changes
 
 ### Fixed
 nothing fixed
+
+## [Version 0.2] - 2024-04-16
+
+### Added
+- we add the home plate with its constraints and some animations
+- we add the keyboard that controls whether it is shown or not
+- We added the section that will allow us to navigate in the application
+
+### Changed
+- nothing changes
+
+### Fixed
+- resolved startup constraints
