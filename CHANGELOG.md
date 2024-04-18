@@ -25,3 +25,16 @@ nothing fixed
 
 ### Fixed
 - resolved startup constraints
+
+## [Version 0.3] - 2024-04-18
+
+### Added
+- we added the view of favorites and characters
+- we add the view, controller and the builder
+- we add the search protocol
+
+### Changed
+- nothing changes
+
+### Fixed
+- nothing fixed
