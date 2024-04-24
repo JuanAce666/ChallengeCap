@@ -23,6 +23,15 @@
 		AB94592D2BD0380D00D8E456 /* CaracterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB94592C2BD0380D00D8E456 /* CaracterCollectionViewCell.xib */; };
 		AB94592F2BD0383C00D8E456 /* FavoriteCaracterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB94592E2BD0383C00D8E456 /* FavoriteCaracterCollectionViewCell.swift */; };
 		AB9459312BD0385300D8E456 /* FavoriteCaracterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9459302BD0385300D8E456 /* FavoriteCaracterCollectionViewCell.xib */; };
+		AB9459342BD1058500D8E456 /* ErrorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9459332BD1058500D8E456 /* ErrorCollectionViewCell.swift */; };
+		AB9459382BD150F400D8E456 /* ErrorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9459372BD150F400D8E456 /* ErrorCollectionViewCell.xib */; };
+		ABA8AC872BD6C6ED00C036C9 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8AC862BD6C6ED00C036C9 /* CharacterDetailView.swift */; };
+		ABA8AC892BD6C6FC00C036C9 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8AC882BD6C6FC00C036C9 /* CharacterDetailViewController.swift */; };
+		ABA8AC8C2BD7F89000C036C9 /* CreateCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8AC8B2BD7F89000C036C9 /* CreateCharacterView.swift */; };
+		ABA8AC8E2BD7F89E00C036C9 /* CreateCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8AC8D2BD7F89E00C036C9 /* CreateCharacterViewController.swift */; };
+		ABA8AC922BD84A0100C036C9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ABA8AC912BD84A0100C036C9 /* Alamofire */; };
+		ABAA19D72BD6A41000EA23CA /* CharacterContantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA19D62BD6A41000EA23CA /* CharacterContantView.swift */; };
+		ABAA19D92BD6A41F00EA23CA /* CharacterContantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA19D82BD6A41F00EA23CA /* CharacterContantViewController.swift */; };
 		ABAF362D2BC890BC0051B781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF362C2BC890BC0051B781 /* AppDelegate.swift */; };
 		ABAF362F2BC890BC0051B781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF362E2BC890BC0051B781 /* SceneDelegate.swift */; };
 		ABAF36312BC890BC0051B781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF36302BC890BC0051B781 /* ViewController.swift */; };
@@ -72,6 +81,14 @@
 		AB94592C2BD0380D00D8E456 /* CaracterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaracterCollectionViewCell.xib; sourceTree = "<group>"; };
 		AB94592E2BD0383C00D8E456 /* FavoriteCaracterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCaracterCollectionViewCell.swift; sourceTree = "<group>"; };
 		AB9459302BD0385300D8E456 /* FavoriteCaracterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCaracterCollectionViewCell.xib; sourceTree = "<group>"; };
+		AB9459332BD1058500D8E456 /* ErrorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB9459372BD150F400D8E456 /* ErrorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorCollectionViewCell.xib; sourceTree = "<group>"; };
+		ABA8AC862BD6C6ED00C036C9 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		ABA8AC882BD6C6FC00C036C9 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		ABA8AC8B2BD7F89000C036C9 /* CreateCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCharacterView.swift; sourceTree = "<group>"; };
+		ABA8AC8D2BD7F89E00C036C9 /* CreateCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCharacterViewController.swift; sourceTree = "<group>"; };
+		ABAA19D62BD6A41000EA23CA /* CharacterContantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterContantView.swift; sourceTree = "<group>"; };
+		ABAA19D82BD6A41F00EA23CA /* CharacterContantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterContantViewController.swift; sourceTree = "<group>"; };
 		ABAF36292BC890BC0051B781 /* ChallengeCapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeCapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF362C2BC890BC0051B781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABAF362E2BC890BC0051B781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA8AC922BD84A0100C036C9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +152,42 @@
 			path = CharactesFavorites;
 			sourceTree = "<group>";
 		};
+		AB9459322BD1056900D8E456 /* CellError */ = {
+			isa = PBXGroup;
+			children = (
+				AB9459332BD1058500D8E456 /* ErrorCollectionViewCell.swift */,
+				AB9459372BD150F400D8E456 /* ErrorCollectionViewCell.xib */,
+			);
+			path = CellError;
+			sourceTree = "<group>";
+		};
+		ABA8AC852BD6C6D100C036C9 /* DetailCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				ABA8AC862BD6C6ED00C036C9 /* CharacterDetailView.swift */,
+				ABA8AC882BD6C6FC00C036C9 /* CharacterDetailViewController.swift */,
+			);
+			path = DetailCharacters;
+			sourceTree = "<group>";
+		};
+		ABA8AC8A2BD7F86B00C036C9 /* CreateCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				ABA8AC8B2BD7F89000C036C9 /* CreateCharacterView.swift */,
+				ABA8AC8D2BD7F89E00C036C9 /* CreateCharacterViewController.swift */,
+			);
+			path = CreateCharacter;
+			sourceTree = "<group>";
+		};
+		ABAA19D32BD6A3DD00EA23CA /* CharacterContant */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA19D62BD6A41000EA23CA /* CharacterContantView.swift */,
+				ABAA19D82BD6A41F00EA23CA /* CharacterContantViewController.swift */,
+			);
+			path = CharacterContant;
+			sourceTree = "<group>";
+		};
 		ABAF36202BC890BC0051B781 = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +215,11 @@
 				ABAF365C2BC891350051B781 /* KeyboardManager.swift */,
 				ABAF36662BC891AA0051B781 /* Others */,
 				ABAF36652BC8919D0051B781 /* Model */,
+				ABA8AC852BD6C6D100C036C9 /* DetailCharacters */,
 				ABAF36602BC891550051B781 /* DragonMain */,
 				ABAF365F2BC8914D0051B781 /* WS */,
+				ABA8AC8A2BD7F86B00C036C9 /* CreateCharacter */,
+				ABAA19D32BD6A3DD00EA23CA /* CharacterContant */,
 				ABAF365E2BC891430051B781 /* Home */,
 				ABAF362C2BC890BC0051B781 /* AppDelegate.swift */,
 				ABAF362E2BC890BC0051B781 /* SceneDelegate.swift */,
@@ -215,19 +272,11 @@
 				AB94591D2BCEFCD600D8E456 /* CharactesFavorites */,
 				AB94591C2BCEFCCF00D8E456 /* Characters */,
 				ABAF36622BC891670051B781 /* Adapters */,
-				ABAF36612BC891600051B781 /* Strategy */,
 				AB9459242BCF0BBA00D8E456 /* CharacterView.swift */,
 				AB9459262BCF0BCB00D8E456 /* CharacterViewController.swift */,
 				AB9459282BCF0BEE00D8E456 /* CharacterViewControllerBuilder.swift */,
 			);
 			path = DragonMain;
-			sourceTree = "<group>";
-		};
-		ABAF36612BC891600051B781 /* Strategy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Strategy;
 			sourceTree = "<group>";
 		};
 		ABAF36622BC891670051B781 /* Adapters */ = {
@@ -269,6 +318,7 @@
 		ABAF36662BC891AA0051B781 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				AB9459322BD1056900D8E456 /* CellError */,
 				ABAF36742BC9DFD70051B781 /* AppNavegationController.swift */,
 				AB9459142BCE1D6200D8E456 /* AnimationButton.swift */,
 			);
@@ -299,6 +349,9 @@
 			dependencies = (
 			);
 			name = ChallengeCapi;
+			packageProductDependencies = (
+				ABA8AC912BD84A0100C036C9 /* Alamofire */,
+			);
 			productName = ChallengeCapi;
 			productReference = ABAF36292BC890BC0051B781 /* ChallengeCapi.app */;
 			productType = "com.apple.product-type.application";
@@ -372,7 +425,7 @@
 			);
 			mainGroup = ABAF36202BC890BC0051B781;
 			packageReferences = (
-				AB9459112BCDA73E00D8E456 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ABA8AC902BD84A0100C036C9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = ABAF362A2BC890BC0051B781 /* Products */;
 			projectDirPath = "";
@@ -391,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABAF36392BC890C00051B781 /* Base in Resources */,
+				AB9459382BD150F400D8E456 /* ErrorCollectionViewCell.xib in Resources */,
 				AB9459312BD0385300D8E456 /* FavoriteCaracterCollectionViewCell.xib in Resources */,
 				ABAF366B2BC9BCD70051B781 /* Assets.xcassets in Resources */,
 				ABAF36342BC890BC0051B781 /* Base in Resources */,
@@ -421,14 +475,19 @@
 			files = (
 				AB94592B2BD037EF00D8E456 /* CharacterCollectionViewCell.swift in Sources */,
 				AB9459272BCF0BCB00D8E456 /* CharacterViewController.swift in Sources */,
+				ABAA19D92BD6A41F00EA23CA /* CharacterContantViewController.swift in Sources */,
 				AB9459212BCF0B1B00D8E456 /* ListCharacterSimpleAdapter.swift in Sources */,
 				AB9459292BCF0BEE00D8E456 /* CharacterViewControllerBuilder.swift in Sources */,
 				ABAF365D2BC891350051B781 /* KeyboardManager.swift in Sources */,
+				AB9459342BD1058500D8E456 /* ErrorCollectionViewCell.swift in Sources */,
 				AB9459192BCEF53400D8E456 /* SearchCharacterAdapterProtocol.swift in Sources */,
 				AB94591B2BCEF55500D8E456 /* ListCharacterAdapterProtocol.swift in Sources */,
 				AB9459252BCF0BBA00D8E456 /* CharacterView.swift in Sources */,
+				ABAA19D72BD6A41000EA23CA /* CharacterContantView.swift in Sources */,
+				ABA8AC8C2BD7F89000C036C9 /* CreateCharacterView.swift in Sources */,
 				ABAF36752BC9DFD70051B781 /* AppNavegationController.swift in Sources */,
 				AB94592F2BD0383C00D8E456 /* FavoriteCaracterCollectionViewCell.swift in Sources */,
+				ABA8AC8E2BD7F89E00C036C9 /* CreateCharacterViewController.swift in Sources */,
 				ABAF36312BC890BC0051B781 /* ViewController.swift in Sources */,
 				ABAF362D2BC890BC0051B781 /* AppDelegate.swift in Sources */,
 				AB9459152BCE1D6200D8E456 /* AnimationButton.swift in Sources */,
@@ -436,6 +495,8 @@
 				ABAF36712BC9BE120051B781 /* HomeView.swift in Sources */,
 				AB9459172BCED62500D8E456 /* TapBarControllerViewController.swift in Sources */,
 				AB9459132BCDBD3200D8E456 /* Dragon.swift in Sources */,
+				ABA8AC872BD6C6ED00C036C9 /* CharacterDetailView.swift in Sources */,
+				ABA8AC892BD6C6FC00C036C9 /* CharacterDetailViewController.swift in Sources */,
 				AB94591F2BCF0B0800D8E456 /* ListCharacterGrillAdapter.swift in Sources */,
 				ABAF362F2BC890BC0051B781 /* SceneDelegate.swift in Sources */,
 				AB9459102BCD044B00D8E456 /* DragonWS.swift in Sources */,
@@ -788,7 +849,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AB9459112BCDA73E00D8E456 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		ABA8AC902BD84A0100C036C9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
@@ -797,6 +858,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABA8AC912BD84A0100C036C9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABA8AC902BD84A0100C036C9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABAF36212BC890BC0051B781 /* Project object */;
 }

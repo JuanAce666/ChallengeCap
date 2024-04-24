@@ -38,3 +38,17 @@ nothing fixed
 
 ### Fixed
 - nothing fixed
+
+## [Version 0.4] - 2024-04-24
+
+### Added
+- We have already instantiated the contacts view in the tapbar
+- The view and contact constraints are now ready
+- The view and constraints of character details are now ready
+- In the contact controller there are already the functions to send to social networks
+
+### Changed
+- nothing changes
+
+### Fixed
+- nothing fixed

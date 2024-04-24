@@ -13,7 +13,9 @@ class AppNavigationController: UINavigationController {
         super.viewDidLoad()
         
         let homeViewController = HomeViewController()
-    
+        let  tabBarController = TapBarControllerViewController()
+        
+        pushViewController(tabBarController, animated: false)
         self.viewControllers = [homeViewController]
     }
 }

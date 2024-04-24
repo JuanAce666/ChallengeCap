@@ -24,7 +24,7 @@ class CharacterView: UIView {
     } ()
     
     private lazy var refreshControl: UIRefreshControl = {
-       let refresh = UIRefreshControl()
+        let refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(self.pulltoRefresh(_:)), for: .valueChanged)
         return refresh
     }()
@@ -37,7 +37,7 @@ class CharacterView: UIView {
     
     weak var delegate: CharacterViewDelegate?
     private var listAdapter: ListCharacterAdapterProtocol?
-   // private var searchAdapter: SearchCharacterAdapterProtocol?
+     private var searchAdapter: SearchCharacterAdapterProtocol?
     
     init(listAdapter: ListCharacterAdapterProtocol, searchAdapter: SearchCharacterAdapterProtocol) {
         self.listAdapter = listAdapter
@@ -56,52 +56,52 @@ class CharacterView: UIView {
         self.addElements()
     }
     
-   /* func setupAdapters() {
-        self.listAdapter?.setCollectionView(self.clvMovies)
-        self.searchAdapter?.setSearchBar(self.srcMovies)
+    func setupAdapters() {
+        self.listAdapter?.setCollectionView(self.clvCharacters)
+        self.searchAdapter?.setSearchBar(self.srcCharacters)
         self.clvCharacters.addSubview(self.refreshControl)
         
-        self.listAdapter?.didSelectHandler { movie in
-        self.delegate?.CharacterView(self, didselectMovie: movie)
+       /* self.listAdapter?.didSelectHandler { movie in
+             self.delegate?.CharacterView(self, didselectMovie: movie)
+             }
+             self.searchAdapter?.didFilterHandler({ result in
+             self.reloadCollectionView(result)
+             }) */
         }
-        self.searchAdapter?.didFilterHandler({ result in
-            self.reloadCollectionView(result)
-        })
-    }*/
-    
-    func showLoading(_ isShow: Bool) {
-        isShow ? self.refreshControl.beginRefreshing() : self.refreshControl.endRefreshing()
-    }
-    
-    private func reloadCollectionView(_ datasource: [Any]) {
-        self.listAdapter?.datasource = datasource
-        self.clvCharacters.reloadData()
-    }
-    
-  /*  func reloadData(_ datasource: [Movie]) {
-        self.searchAdapter?.datasource = datasource
-        self.reloadCollectionView(datasource)
         
-    }*/
-    
-    @objc private func pulltoRefresh(_ refreshControl: UIRefreshControl) {
-        self.delegate?.characterViewStartPullToRefresh(self)
-    }
-    
-    func addElements() {
-        self.backgroundColor = .white
-        self.addSubview(self.clvCharacters)
-        self.addSubview(self.clvCharacters)
+        func showLoading(_ isShow: Bool) {
+            isShow ? self.refreshControl.beginRefreshing() : self.refreshControl.endRefreshing()
+        }
         
-        NSLayoutConstraint.activate([
-            self.srcCharacters.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            self.srcCharacters.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.srcCharacters.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+        private func reloadCollectionView(_ datasource: [Any]) {
+            self.listAdapter?.datasource = datasource
+            self.clvCharacters.reloadData()
+        }
+        
+        /* func reloadData(_ datasource: [Movie]) {
+         self.searchAdapter?.datasource = datasource
+         self.reloadCollectionView(datasource)
+         }*/
+        
+        @objc private func pulltoRefresh(_ refreshControl: UIRefreshControl) {
+            self.delegate?.characterViewStartPullToRefresh(self)
+        }
+        
+        func addElements() {
+            self.backgroundColor = .white
+            self.addSubview(self.clvCharacters)
+            self.addSubview(self.clvCharacters)
             
-            self.srcCharacters.topAnchor.constraint(equalTo: self.srcCharacters.bottomAnchor),
-            self.srcCharacters.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.srcCharacters.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.srcCharacters.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
+            NSLayoutConstraint.activate([
+                self.srcCharacters.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+                self.srcCharacters.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                self.srcCharacters.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+                
+                self.srcCharacters.topAnchor.constraint(equalTo: self.srcCharacters.bottomAnchor),
+                self.srcCharacters.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                self.srcCharacters.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+                self.srcCharacters.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            ])
+        }
     }
-}
+

@@ -18,7 +18,7 @@ class CharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = self.characterView
-        self.characterView.delegate = self
+       // self.characterView.delegate = self
      //   self.characterView.setupAdapters()
       
       /*  if shouldLoadMoviesOnInit {

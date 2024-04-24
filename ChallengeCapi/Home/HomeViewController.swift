@@ -19,3 +19,9 @@ class HomeViewController: ViewController {
     }
     
 }
+
+extension HomeViewController: HomeViewDelegate {
+    func homeViewDidTapListButton2(_ homeView: HomeView) {
+        self.performSegue(withIdentifier: "TapBarControllerViewController", sender: nil)
+    }
+}

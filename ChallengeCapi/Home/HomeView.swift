@@ -7,9 +7,16 @@
 
 import UIKit
 
+
+@objc protocol HomeViewDelegate: AnyObject {
+    func homeViewDidTapListButton2(_ homeView: HomeView)
+}
+
 class HomeView: UIView {
+    @IBOutlet weak var delegate: HomeViewDelegate?
         
     @IBAction private func ButtonInit(_ sender: UIButton){
+        self.delegate?.homeViewDidTapListButton2(self)
         if let animationButton = sender as? AnimationButton {
             animationButton.animateButton()
         }
