@@ -52,3 +52,15 @@ nothing fixed
 
 ### Fixed
 - nothing fixed
+
+## [Version 0.5] - 2024-04-24
+
+### Added
+- We already consume a provisional api to see how it works
+- we pass the api to the business model
+
+### Changed
+- nothing changes
+
+### Fixed
+- nothing fixed

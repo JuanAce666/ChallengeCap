@@ -10,7 +10,7 @@ import UIKit
 
 
 struct DragonWS {
-    let urlString = "https://mocki.io/v1/8b4a13d1-a251-42cd-bc0a-a4b6e59afb5b"
+    let urlString = "https://34f8409486bf45f7820f71e8f9987cf5.api.mockbin.io/"
     func fetch(completionHandler: @escaping CompletionHandler)  {
         AF.request(self.urlString, method: .get).response { dataResponse in
             guard let data = dataResponse.data else { return }
@@ -20,14 +20,19 @@ struct DragonWS {
     }
 }
 
+//MARK: - Cloruses - and DTO
 extension DragonWS {
-    typealias CompletionHandler = (_ arrayCharacterDTO: [CharacterDTO]) -> Void
+    typealias CompletionHandler = (_ arrayMoviesDTO: [CharacterDTO]) -> Void
     
     struct CharacterResponseDTO: Decodable {
         let results: [CharacterDTO]?
     }
+    
     struct CharacterDTO: Decodable {
-
+        let nombre: String?
+        let nivelDePoder: Int?
+        let description: String?
+        let imagenUrl: String?
     }
 }
 
