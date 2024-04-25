@@ -10,29 +10,40 @@ import UIKit
 
 
 struct DragonWS {
-    let urlString = "https://34f8409486bf45f7820f71e8f9987cf5.api.mockbin.io/"
-    func fetch(completionHandler: @escaping CompletionHandler)  {
-        AF.request(self.urlString, method: .get).response { dataResponse in
-            guard let data = dataResponse.data else { return }
-            let responseDTO = try? JSONDecoder().decode(CharacterResponseDTO.self, from: data)
-            completionHandler(responseDTO?.results ?? [])
+   
+    private let baseURL = "https://34f8409486bf45f7820f71e8f9987cf5.api.mockbin.io/"
+    
+    func fetch(idCharacter: Int, completionHandler: @escaping CompletionHandler) {
+        let urlString = "\(baseURL)\(idCharacter)"
+        AF.request(urlString, method: .get).response { dataResponse in
+            guard let data = dataResponse.data else {
+                completionHandler([])
+                return
+            }
+            do {
+                let responseDTO = try JSONDecoder().decode(CharacterResponseDTO.self, from: data)
+                completionHandler(responseDTO.results ?? [])
+            } catch {
+                print("Error decoding JSON: \(error)")
+                completionHandler([])
+            }
         }
     }
 }
 
-//MARK: - Cloruses - and DTO
+// MARK: - Closures and DTO
 extension DragonWS {
-    typealias CompletionHandler = (_ arrayMoviesDTO: [CharacterDTO]) -> Void
+    typealias CompletionHandler = (_ arrayCharacterDTO: [CharacterDTO]) -> Void
     
     struct CharacterResponseDTO: Decodable {
         let results: [CharacterDTO]?
     }
     
     struct CharacterDTO: Decodable {
+        let id: Int?
         let nombre: String?
         let nivelDePoder: Int?
         let description: String?
         let imagenUrl: String?
     }
 }
-

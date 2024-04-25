@@ -7,13 +7,17 @@
 
 import UIKit
 
-class ListCharacterSimpleAdapter: NSObject, ListCharacterAdapterProtocol, UICollectionViewDelegate {
+class ListCharacterSimpleAdapter: NSObject, ListCharacterAdapterProtocol{
     
     private unowned var collectionView: UICollectionView?
-    
+
+    // Manejador de selección de películas, se convierte en un callback
+    private var didSelect: ((_ character: Character) -> Void)?
+
+    // Origen de datos de las películas
     var datasource = [Any]() {
         didSet {
-            self.datasource is [Any] ? self.setCaractersLayout() : self.setErrorLayout()
+            self.datasource is [Character] ? self.setCaractersLayout() : self.setErrorLayout()
         }
     }
     
@@ -24,6 +28,11 @@ class ListCharacterSimpleAdapter: NSObject, ListCharacterAdapterProtocol, UIColl
         self.setCaractersLayout()
         self.collectionView?.register(UINib(nibName: "FavoriteCaracterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavoriteCaracterCollectionViewCell")
         self.collectionView?.register(UINib(nibName: "ErrorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ErrorCollectionViewCell")
+    }
+    
+    func didSelectHandler(_ handler: @escaping (_ character: Character) -> Void) {
+        // se le asigna ese closure al didselect para que se pueda llamar cuando sea necesario
+        self.didSelect = handler
     }
     
     private func setCaractersLayout() {
@@ -72,8 +81,20 @@ extension ListCharacterSimpleAdapter: UICollectionViewDataSource {
         
         if let message = item as? String {
             return ErrorCollectionViewCell.buildIn(collectionView, in: indexPath, with: message)
-        } else {
-            return UICollectionViewCell() // Puedes devolver una celda genérica si no hay un mensaje de error
+        }else if let character = item as? Character {
+            return  FavoriteCaracterCollectionViewCell.buildIn(collectionView, in: indexPath, with: character)
+        }else {
+            return UICollectionViewCell()
         }
+    }
+}
+
+extension ListCharacterSimpleAdapter: UICollectionViewDelegate {
+    // Se llama cuando se selecciona un elemento en la vista
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Llama al handler de selección con la película correspondiente en el índice seleccionado
+        guard let character = self.datasource[indexPath.row] as? Character else { return }
+        self.didSelect?(character)
+        print(1)
     }
 }

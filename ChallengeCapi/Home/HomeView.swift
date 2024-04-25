@@ -20,6 +20,7 @@ class HomeView: UIView {
         if let animationButton = sender as? AnimationButton {
             animationButton.animateButton()
         }
+
     }
     
 }

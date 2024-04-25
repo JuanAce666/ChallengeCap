@@ -9,67 +9,50 @@ import UIKit
 
 class CharacterViewController: UIViewController {
     
-    private var shouldLoadMoviesOnInit: Bool
-  //  private var strategy: CharacterStrategyProtocol
     private var characterView: CharacterView
- //   private var characters: [Characters] = []
-  //  private lazy var webServices = DragonWS()
+    private var characters: [Character] = []
+    private lazy var webServices = DragonWS()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = self.characterView
-       // self.characterView.delegate = self
-     //   self.characterView.setupAdapters()
-      
-      /*  if shouldLoadMoviesOnInit {
-            strategy.getMovies()
-        }
-        NotificationCenter.default.addObserver(self, selector: #selector(handleFavoritesUpdatedNotification), name: Notification.Name("FavoritesUpdated"), object: nil)*/
+        self.characterView.delegate = self
+        self.characterView.setupAdapters()
     }
     
     private func getAll() {
-        /*  self.characterView.showLoading(true)
-          self.webServices.fetch { arrayMovieDTO in
-            self.characterView.showLoading(false)
-            self.characterView.reloadData(arrayMovieDTO.toMovie)
-        }*/
-    }
-        
-    func loadFavorites() {
-      //  strategy.getMovies()
+        self.characterView.showLoading(true)
+        self.webServices.fetch(idCharacter: 123) { arrayCharacterDTO in
+        self.characterView.showLoading(false)
+        self.characterView.reloadData(arrayCharacterDTO.toCharacter)
+        }
     }
     
-   /* init(movieView: MoviesView, strategy: MovieStrategyProtocol, shouldLoadMoviesOnInit: Bool) {
-        self.movieView = movieView
-        self.strategy = strategy
-        self.shouldLoadMoviesOnInit = shouldLoadMoviesOnInit
+    init(characterView: CharacterView) {
+        self.characterView = characterView
         super.init(nibName: nil, bundle: nil)
-    }*/
-    
+    }
+  
     required init?(coder: NSCoder) {
         fatalError("error")
     }
     
-   /* private func selectedImage(_ movie: Movie) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailsVC = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        detailsVC.movieId = movie.id
-        detailsVC.movie = movie
-        self.navigationController?.pushViewController(detailsVC, animated: true)
-    }
-    
-    @objc private func handleFavoritesUpdatedNotification() {
-        // Actualizar la vista según sea necesario
-        strategy.getMovies()
-    }
+     private func selectedImage(_ character: Character) {
+     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+     let detailsVC = storyBoard.instantiateViewController(withIdentifier: "CharacterDetailViewController") as! CharacterDetailViewController
+     detailsVC.characterId = character.id
+     detailsVC.character = character
+     self.navigationController?.pushViewController(detailsVC, animated: true)
+     }
 }
 
-extension MoviesViewController: MovieViewDelegate {
-    func movieViewStartPullToRefresh(_ movieView: MoviesView) {
-        self.getAll()
+extension CharacterViewController: CharacterViewDelegate {
+    func characterView(_ characterView: CharacterView, didSelectCharacter character: Character) {
+        self.selectedImage(character)
     }
     
-    func movieView(_ movieView: MoviesView, didselectMovie movie: Movie) {
-        self.selectedImage(movie)
-    } */
+    func characterViewStartPullToRefresh(_ characterView: CharacterView) {
+        self.getAll()
+    }
+
 }

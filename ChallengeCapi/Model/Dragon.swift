@@ -5,13 +5,14 @@
 //  Created by Juan Felipe Acevedo Ramirez on 15/04/24.
 //
 
-import Foundation
+import UIKit
 
 class Character {
     var nombre: String = ""
     var nivelDePoder: Int = 0
     var description: String = ""
     var imagenUrl: String = ""
+    var id: Int = 0
 
     // Constructor para inicializar un Character desde un CharacterDTO
     init(dto: DragonWS.CharacterDTO) {
@@ -19,6 +20,7 @@ class Character {
         self.nivelDePoder = dto.nivelDePoder ?? 0
         self.description = dto.description ?? "--"
         self.imagenUrl = dto.imagenUrl ?? ""
+        self.id = dto.id ?? 0
     }
 }
 

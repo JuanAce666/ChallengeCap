@@ -64,3 +64,15 @@ nothing fixed
 
 ### Fixed
 - nothing fixed
+
+## [Version 0.6.final(?)] - 2024-04-25
+
+### Added
+- we finished polishing some things
+- We remove the comments so that everything runs well
+
+### Changed
+- nothing changes
+
+### Fixed
+- nothing fixed

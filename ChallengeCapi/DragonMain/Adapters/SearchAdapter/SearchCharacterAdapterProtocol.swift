@@ -8,7 +8,8 @@
 import UIKit
 
 protocol SearchCharacterAdapterProtocol: AnyObject {
- //   var datasource: [Movie] {get set}
+    var datasource: [Character] {get set}
     func setSearchBar(_ searchBar: UISearchBar)
     func didFilterHandler(_ handler: @escaping (_ result:  [Any]) -> Void)
+    
 }

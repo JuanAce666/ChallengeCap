@@ -22,12 +22,12 @@ class TapBarControllerViewController: UITabBarController {
         third.tabBarItem = UITabBarItem(title: "Contact", image: UIImage(systemName: "iphone"), selectedImage: UIImage(systemName: "iphone.fill"))
 
         
-      /* let first = CharacterViewController.buildGrill()
+       let first = CharacterViewController.buildGrill()
        let second = CharacterViewController.buildSimple()
         
         first.tabBarItem = UITabBarItem(title: "Character", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle.fill"))
-        second.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star"))*/
+        second.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star"))
         
-        viewControllers = [third]
+        viewControllers = [first,second,third]
     }
 }

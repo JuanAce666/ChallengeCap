@@ -10,14 +10,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        DragonWS().fetch { json in
-            print("no respondio")
-        }
         return true
+        
     }
 
     // MARK: UISceneSession Lifecycle

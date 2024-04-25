@@ -7,16 +7,16 @@
 
 import UIKit
 
- /*extension CharacterViewController {
+   extension CharacterViewController {
      class func buildSimple() -> CharacterViewController {
       let characterView = CharacterView(listAdapter: ListCharacterSimpleAdapter(), searchAdapter: SearchCharacterByInfoAdapter())
-      let controller = CharacterViewController(movieView: movieView, strategy: FavoritesStrategy(movieView: movieView), shouldLoadMoviesOnInit: true)
+      let controller = CharacterViewController(characterView: characterView)
         return controller
     }
     
     class func buildGrill() -> CharacterViewController {
       let characterView = CharacterView(listAdapter: ListCharacterSimpleAdapter(), searchAdapter: SearchCharacterByInfoAdapter())
-     /*  let controller = CharacterViewController(movieView: movieView, strategy: MovieStrategy(movieView: movieView), shouldLoadMoviesOnInit: true)
-        return controller */
+      let controller = CharacterViewController(characterView: characterView)
+        return controller
     }
-}*/
+}

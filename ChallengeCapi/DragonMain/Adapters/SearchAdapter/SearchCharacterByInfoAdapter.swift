@@ -8,7 +8,7 @@
 import UIKit
 
 class SearchCharacterByInfoAdapter: NSObject, SearchCharacterAdapterProtocol {
-   // var datasource: [Movie] = []
+    var datasource: [Character] = []
     private var didFilter: ((_ result: [Any]) -> Void)?
     
     func setSearchBar(_ searchBar: UISearchBar) {
@@ -23,22 +23,22 @@ class SearchCharacterByInfoAdapter: NSObject, SearchCharacterAdapterProtocol {
 }
 
 extension SearchCharacterByInfoAdapter: UISearchBarDelegate {
-    //se va a llamar cuando se detecte un cambio en la barra de busquedad
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    /*    var arrayResult: [Any] = []
+        var arrayResult: [Any] = []
         let searchTextLowercased = searchText.lowercased()
         
         if searchTextLowercased.isEmpty {
             arrayResult = self.datasource
         }else {
             arrayResult = self.datasource.filter({
-                $0.original_title.lowercased().contains(searchText.lowercased())
+                $0.nombre.lowercased().contains(searchText.lowercased())
             })
             arrayResult = !arrayResult.isEmpty ? arrayResult : ["""
-            No results were found for the search for:
+            No se encontraron resultados:
             \(searchText)
             """]
+            
         }
-        self.didFilter?(arrayResult)*/
+        self.didFilter?(arrayResult)
     }
 }

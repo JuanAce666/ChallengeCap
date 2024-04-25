@@ -7,15 +7,19 @@
 
 import UIKit
 
-class ListCharacterGrillAdapter: NSObject, ListCharacterAdapterProtocol, UICollectionViewDelegate {
-    
+class ListCharacterGrillAdapter: NSObject, ListCharacterAdapterProtocol{
     private unowned var collectionView: UICollectionView?
-    
+
+    // Manejador de selección de películas, se convierte en un callback
+    private var didSelect: ((_ character: Character) -> Void)?
+
+    // Origen de datos de las películas
     var datasource = [Any]() {
         didSet {
-            self.datasource is [Any] ? self.setCaractersLayout() : self.setErrorLayout()
+            self.datasource is [Character] ? self.setCaractersLayout() : self.setErrorLayout()
         }
     }
+    
     
     func setCollectionView(_ collectionView: UICollectionView) {
         collectionView.delegate = self
@@ -24,6 +28,10 @@ class ListCharacterGrillAdapter: NSObject, ListCharacterAdapterProtocol, UIColle
         self.setCaractersLayout()
         self.collectionView?.register(UINib(nibName: "CharacterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CharacterCollectionViewCell")
         self.collectionView?.register(UINib(nibName: "ErrorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ErrorCollectionViewCell")
+    }
+    
+    func didSelectHandler(_ handler: @escaping (_ character: Character) -> Void) {
+        self.didSelect = handler
     }
     
     private func setCaractersLayout() {
@@ -62,9 +70,10 @@ class ListCharacterGrillAdapter: NSObject, ListCharacterAdapterProtocol, UIColle
 }
 
 extension ListCharacterGrillAdapter: UICollectionViewDataSource {
-    
+    //Devuelve el número de elementos en la sección especificada
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.datasource.count
+        //Retorna la cantidad de elementos
+        self.datasource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,8 +81,20 @@ extension ListCharacterGrillAdapter: UICollectionViewDataSource {
         
         if let message = item as? String {
             return ErrorCollectionViewCell.buildIn(collectionView, in: indexPath, with: message)
-        } else {
-            return UICollectionViewCell() // Puedes devolver una celda genérica si no hay un mensaje de error
+        }else if let character = item as? Character {
+            return  CharacterCollectionViewCell.buildIn(collectionView, in: indexPath, with: character)
+        }else {
+            return UICollectionViewCell()
         }
+    }
+}
+
+extension ListCharacterGrillAdapter: UICollectionViewDelegate {
+    // Se llama cuando se selecciona un elemento en la vista
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Llama al handler de selección con la película correspondiente en el índice seleccionado
+        guard let character = self.datasource[indexPath.row] as? Character else { return }
+        self.didSelect?(character)
+        print(1)
     }
 }
